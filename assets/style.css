@@ -27,7 +27,7 @@ figure {
     padding: 0;
 }
 figure img {
-    width: 100%;
+    max-width: 75%;
     height: auto;
 }
 iframe {
@@ -3226,7 +3226,7 @@ input:focus:-ms-input-placeholder {
     height: 70px;
 }
 .sidebox .post-list .meta {
-    /* margin-left: 85px; */
+    margin-left: 85px;
     overflow: hidden;
     margin-bottom: 0;
 }

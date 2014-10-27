@@ -1,8 +1,10 @@
 make			: Koss
 model			: PortaPro
-mod				: Kramer
+mod				: kramer
 est_cost_usd	: 40
 url				: http://www.head-fi.org/t/124243/kramer-mod-ksc75
+tagline         : Find out why Charles Altmann of Tera Player fame listens with
+                  this mod!
+headphone_image : http://www.novabazar.com/projexml/v5/services/1008/images/buyuk/koss-portapro-ktc-mikrof_3562_3.jpg
 
-With some well placed ventillation and some extra foam, you can convert a $40
-pair of headphones into something costing several times more.
+![](http://i355.photobucket.com/albums/r445/jmwreck/SAM_0117.jpg)

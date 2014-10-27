@@ -2,10 +2,13 @@
 <ul class="post-list">
   {% for mod in mods|recent_mods %}
   <li>
+    {% with mod_basename=mod|basename %}
+    <div class="icon-overlay icn-link"><a href="{{ mod_basename }}.html"><span class="icn-more"></span><img src="{{ mod.headphone_image }}" alt=""></a></div>
     <div class="meta">
-      <h6><a href="{{ mod|basename }}.html">{{ mod.make }} {{ mod.model }} - {{ mod.mod }}</a></h6>
-      <!-- <em>3th Oct 2012</em> -->
+      <h6><a href="{{ mod_basename }}.html">{{ mod.make }} {{ mod.model }}<br><em>{{ mod.mod }}</em></a></h6>
+      <!-- <em>3th Oct 2012</em>-->
     </div>
+    {% endwith %}
   </li>
   {% endfor %}
 </ul>

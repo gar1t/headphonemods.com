@@ -5,20 +5,9 @@
 <div class="post">
   <div class="post-content">
     <h2 class="post-title">{{ mod.make }} {{ mod.model }} - {{ mod.mod }} mod</h2>
-    <h5><a href="#">{{ mod.url }}</a></h5>
-    <!--
-    <div class="meta">
-      <span class="date">17 August 2013</span>
-      <span class="category"><a href="#">Journal</a>, <a href="#">Photography</a>, <a href="#">Web Design</a></span> <span class="comments"><a href="#">5 Comments</a></span> <span class="like"><a href="#">16 <i class="icon-heart"></i></a></span>
-    </div>
-    -->
-
-    <!--
-    <figure class="overlay media-wrapper"><img src="style/images/art/b1-large.jpg" alt=""></figure>
-    -->
-
+    <p><em>{{ mod.tagline }}</em></p>
+    <h3><a href="{{ mod.url }}" target="_blank">Click here for the original mod post</a></h3>
     {{ mod|markdown_to_html }}
-
   </div>
   <!-- /.post-content --> 
 </div>
