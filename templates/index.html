@@ -1,0 +1,64 @@
+{% extends "base_with_sidebar.html" %}
+
+{% block links %}
+<link href="http://cdn.datatables.net/1.10.3/css/jquery.dataTables.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block main_content %}
+<table id="mods" class="display" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Mod</th>
+      <th>Total Cost (USD)</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Mod</th>
+      <th>Total Cost (USD)</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    {% for mod in mods %}
+    <tr>
+      {% with mod_basename=mod|basename %}
+      <td><a href="{{ mod_basename }}.html">{{ mod.make }}</a></td>
+      <td><a href="{{ mod_basename }}.html">{{ mod.model }}</a></td>
+      <td><a href="{{ mod_basename }}.html">{{ mod.mod }}</a></td>
+      <td>${{ mod.est_cost_usd }}</td>
+      {% endwith %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+
+{% block scripts %}
+<script src="http://cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script> 
+<script>
+  var modTableOpts = {
+    responsive: true,
+    paging: false,
+    language: {
+      search: "",
+      searchPlaceholder: "Type here to filter the results"
+    },
+    columnDefs: [
+      {
+	targets: 3,
+	className: "text-right",
+	type: "num-fmt"
+      }
+    ]
+  };
+
+  $(document).ready(function () {
+    $('#mods').dataTable(modTableOpts);
+  });
+
+</script>
+{% endblock %}

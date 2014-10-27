@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="light-wrapper">
+  <div class="container inner">
+    <div class="row classic-blog single">
+      <div class="col-sm-9 content">
+	{% block main_content %}{% endblock %}
+      </div>
+      <aside class="col-sm-3 sidebar lp30">
+        <div class="sidebox widget">
+	  {% include "sidebar.html" %}
+	</div>
+      </aside>
+    </div>
+  </div> 
+</div>
+{% endblock %}

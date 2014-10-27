@@ -1,0 +1,11 @@
+<h3>Recent Mods</h3>
+<ul class="post-list">
+  {% for mod in mods|recent_mods %}
+  <li>
+    <div class="meta">
+      <h6><a href="{{ mod|basename }}.html">{{ mod.make }} {{ mod.model }} - {{ mod.mod }}</a></h6>
+      <!-- <em>3th Oct 2012</em> -->
+    </div>
+  </li>
+  {% endfor %}
+</ul>

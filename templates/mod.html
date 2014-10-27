@@ -1,0 +1,27 @@
+{% extends "base_with_sidebar.html" %}
+
+{% block main_content %}
+
+<div class="post">
+  <div class="post-content">
+    <h2 class="post-title">{{ mod.make }} {{ mod.model }} - {{ mod.mod }} mod</h2>
+    <h5><a href="#">{{ mod.url }}</a></h5>
+    <!--
+    <div class="meta">
+      <span class="date">17 August 2013</span>
+      <span class="category"><a href="#">Journal</a>, <a href="#">Photography</a>, <a href="#">Web Design</a></span> <span class="comments"><a href="#">5 Comments</a></span> <span class="like"><a href="#">16 <i class="icon-heart"></i></a></span>
+    </div>
+    -->
+
+    <!--
+    <figure class="overlay media-wrapper"><img src="style/images/art/b1-large.jpg" alt=""></figure>
+    -->
+
+    {{ mod|markdown_to_html }}
+
+  </div>
+  <!-- /.post-content --> 
+</div>
+<!-- /.post .format-image --> 
+
+{% endblock %}
